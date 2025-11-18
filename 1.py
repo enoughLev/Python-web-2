@@ -2,7 +2,7 @@ import sys
 
 from PyQt6.QtWidgets import QApplication, QMainWindow, QRadioButton, QLabel, QPushButton
 
-from form_1_ui import Ui_MainWindow
+from forms.form_1_ui import Ui_MainWindow
 
 class DrawFlag(QMainWindow, Ui_MainWindow):
     def __init__(self):
@@ -13,6 +13,7 @@ class DrawFlag(QMainWindow, Ui_MainWindow):
         self.flag = [0, 0, 0]
         self.colors = ["", "Красный", "Белый", "Синий"]
 
+        self.FirstChoose.buttonClicked.connect(self.clicked_on_group_1)
         self.SecondChoose.buttonClicked.connect(self.clicked_on_group_2)
         self.ThirdChoose.buttonClicked.connect(self.clicked_on_group_3)
         self.drawButton.clicked.connect(self.draw)
