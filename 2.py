@@ -33,11 +33,6 @@ class DailyPlanner(QMainWindow, Ui_MainWindow):
         #print(ready_list)
         self.model.setStringList(ready_list)
         self.eventList.setModel(self.model)
-"""        
-        for i in range(0, len(spisok_emae)):
-            print(spisok_emae[i])
-            self.model.setStringList(spisok_emae[i])
-            self.eventList.setModel(self.model)"""
 
 
 
